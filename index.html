@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="https://pmagtulis.github.io/assets/ppm.ico" />
+    <title>Visualization of Citi  Bike rides  </title>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet" />
+
+    <style>
+        html,
+        body {
+            overflow-x: hidden;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .footer {
+            padding: 8px;
+            margin-top: 12px;
+        }
+
+        .section {
+            padding: 3px;
+            margin-top: 12px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="head-container">
+        <p>Citi Bike rides, September 2020, and September 2021 </p>
+    </div>
+    <div class="container">
+       <p><strong>By Stephen Anti</strong>
+            | New York, June 13, 2022</p>
+            <br>
+
+    <p>
+        Citi Bike operates the largest bike share program in the US with over 1,500 bike stations across the boroughs of New York City and parts of New Jersey - Manhattan, Brooklyn, Queens, the Bronx, Jersey City and Hoboken. There are an estimated 25,000 bikes across the city and thousands of riders use the bikes for several reasons: fun, exploring the city, saving money and the convenience of not being tied down to the frustration of traffic congestion and scarcity of parking spaces.<br>
+       
+        <br>
+        Citi Bike collects and publishes  usage data of ride origins and destination, trip duration among others. In this project, the Citi Bike <a href = "https://s3.amazonaws.com/tripdata/index.html" >data</a>  was analyzed to vizualize stops and start destinations and trip counts for September 2020 and September 2021. The first set of maps is a distriubtion of origins and destinatoions across the city for September 2020
+
+    </p> 
+
+    <div class="columns">
+        <div class="column is-half-desktop is-full-mobile is-full-tablet">
+            <div id='map'>
+                <div id='legend-title' class="legend-title">
+                    <div class="legend">
+                        <p>Start trips, September 2020</p>
+                        <div><span style="background-color: #11d10a" class="text-span"></span>0-3000</div>
+                        <div><span style="background-color: #9ce9fc" class="text-span"></span>3001-6,000</div>
+                        <div><span style="background-color: #5f0253" class="text-span"></span>6,001-10,000</div>
+                        <div><span style="background-color:#730c9c" class="text-span"></span>10,001-13,000</div>
+                        <div><span style="background-color: #939b20" class="text-span"></span>13,000 + </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-half-desktop is-full-mobile is-full-tablet">
+            <div id='map2'>
+                <div id='legend-title' class="legend-title">
+                    <div class="legend">
+                        <p>Stop trips, September 2020</p>
+                        <div><span style="background-color: #0e1b22" class="text-span"></span>0-3,000</div>
+                        <div><span style="background-color: #df7c7c" class="text-span"></span>3,001-6,000</div>
+                        <div><span style="background-color: #081ebd" class="text-span"></span>6,001-10,0000</div>
+                        <div><span style="background-color: #a34007" class="text-span"></span>10,001-13,000</div>
+                        <div><span style="background-color: #916c7c" class="text-span"></span>13,001 + </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p> This next set of maps, just like the set above, is a distribution of origins and destinations across New York for September 2021. This also utilises the Citi Bike <a href = "https://s3.amazonaws.com/tripdata/index.html" >data</a> for September 2021 for analysis and vizualisation. The data was analyzed to isolate station names of origins and destinations. Each of the stations were geocoded using the locations in the data and converted to GEOJSON. Each circles represents a station with the size of circles indicating its popularity.
+<em> You can find the notebook that contains the analysis  used for this visualization at <a href="#">this link </a></p></em></p>
+
+    <div class="columns">
+        <div class="column is-half-desktop is-full-mobile is-full-tablet">
+            <div id='map3'>
+                <div id='legend-title' class="legend-title">
+                    <div class="legend">
+                        <p>Start trips,September 2021</p>
+                        <div><span style="background-color: #87f806" class="text-span"></span>0-3,000</div>
+                        <div><span style="background-color: #FCDE9C" class="text-span"></span>3,001-6,000</div>
+                        <div><span style="background-color: #ba2488" class="text-span"></span>6,001-10,000</div>
+                        <div><span style="background-color:#f80677" class="text-span"></span>10,001-13,000</div>
+                        <div><span style="background-color: #863b5b" class="text-span"></span>13,001 + </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="column is-half-desktop is-full-mobile is-full-tablet">
+            <div id='map4'>
+                <div id='legend-title' class="legend-title">
+                    <div class="legend">
+                        <p>Stop trips, September 2021</p>
+                        <div><span style="background-color: #0f93da" class="text-span"></span>0-3,000</div>
+                        <div><span style="background-color: #e9490a" class="text-span"></span>3,001-6,000</div>
+                        <div><span style="background-color: #0722e9" class="text-span"></span>6,001-10,000</div>
+                        <div><span style="background-color: #85053f" class="text-span"></span>10,001-13,000</div>
+                        <div><span style="background-color: #a108dd" class="text-span"></span>13,001 + </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script type='text/javascript' src="map.js"></script>
+
+<div class ="footer">
+    <footer> Copyright &copy 2022. Data: Citi Bike</footer>
+</div>
+
+
+</div>
+</div>
+</div>
+
+
+
+</body>
+</html>
