@@ -51,7 +51,7 @@ map.on("load", function () {
 
 
   mapboxgl.accessToken =
-  "pk.eyJ1Ijoic3RlcGhlbmFudGkiLCJhIjoiY2t4NDN5MDJ2MDJkcTJ2cGFjOGk3MW9jcyJ9.idvR4RaqkBIA5w32u482kw";
+  "pk.eyJ1Ijoic3RlcGhlbmFudGkiLCJhIjoiY2x5M2ZndmtqMDM4YTJrb2ozN24zb3JmbCJ9.qSuAh5SE-sou1NQF3xYUGQ";
 var map2 = new mapboxgl.Map({
   container: "map2",
   style: "mapbox://styles/stephenanti/cl4c4x6se000b16my8a3ht9m3",
@@ -100,7 +100,7 @@ var map2 = new mapboxgl.Map({
 
 
   mapboxgl.accessToken =
-  "pk.eyJ1Ijoic3RlcGhlbmFudGkiLCJhIjoiY2t4NDN5MDJ2MDJkcTJ2cGFjOGk3MW9jcyJ9.idvR4RaqkBIA5w32u482kw";
+  "pk.eyJ1Ijoic3RlcGhlbmFudGkiLCJhIjoiY2x5M2ZndmtqMDM4YTJrb2ozN24zb3JmbCJ9.qSuAh5SE-sou1NQF3xYUGQ";
 var map3 = new mapboxgl.Map({
   container: "map3",
   style: "mapbox://styles/stephenanti/cl4c4x6se000b16my8a3ht9m3",
@@ -149,7 +149,7 @@ var map3 = new mapboxgl.Map({
 
 
   mapboxgl.accessToken =
-  "pk.eyJ1Ijoic3RlcGhlbmFudGkiLCJhIjoiY2t4NDN5MDJ2MDJkcTJ2cGFjOGk3MW9jcyJ9.idvR4RaqkBIA5w32u482kw";
+  "pk.eyJ1Ijoic3RlcGhlbmFudGkiLCJhIjoiY2x5M2ZndmtqMDM4YTJrb2ozN24zb3JmbCJ9.qSuAh5SE-sou1NQF3xYUGQ";
 
 var map4 = new mapboxgl.Map({
   container: "map4",
